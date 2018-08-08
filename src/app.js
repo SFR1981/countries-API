@@ -4,14 +4,14 @@ const ResultView = require('./views/result_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript Loaded');
-  //get the counrties
+  //get the countries
   const country = new Country();
-//  country.getData();
+ country.getData();
  const dropdown = document.querySelector('select#countries');
  const selectView = new SelectView(dropdown);
-// selectView.bindEvents();
+selectView.bindEvents();
  const display = document.querySelector('div#country');
  const resultView = new ResultView(display);
- //resultView.bindEvents(); 
+ //resultView.bindEvents();
 
 });

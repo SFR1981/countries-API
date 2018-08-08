@@ -4,10 +4,11 @@ const SelectView = function (element){
   this.element = element;
 }
 
-SelectView.prototype.bindEvents function () {
+SelectView.prototype.bindEvents = function () {
 
   PubSub.subscribe('Country:countries-ready', (evt)=>{
     const allCountries = evt.detail;
+    console.log(allCountries);
     this.populate(allCountries);
   });
 
