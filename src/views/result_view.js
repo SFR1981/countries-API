@@ -5,10 +5,11 @@ const ResultView = function (container){
   this.container = container;
 }
 
-
+//five subscribe to the published chosen single item
 ResultView.prototype.bindEvents = function () {
   PubSub.subscribe('Country:selected-country-ready', (evt)=>{
     const country = evt.detail;
+    //call to update the view
     this.updateView(country);
   })
 
