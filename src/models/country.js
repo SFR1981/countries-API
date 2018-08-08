@@ -8,13 +8,13 @@ const Country = function(){
 
 }
 
-// Country.prototype.getData = function () {
-//   const request = new Request('url');
-//   request.get((data)=>{
-//     this.text = data.country;
-//     PubSub.publish('Country:country-loaded', this.text);
-//   })
-//};
+Country.prototype.getData = function () {
+  const request = new Request('url');
+  request.get((data)=>{
+    this.text = data.country;
+    PubSub.publish('Country:country-loaded', this.text);
+  })
+};
 
 
 module.exports = Country;

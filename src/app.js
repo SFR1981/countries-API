@@ -7,5 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
   //get the counrties
   const country = new Country();
 //  country.getData();
+ const dropdown = document.querySelector('select#countries');
+ const selectView = new SelectView(dropdown);
+// selectView.bindEvents();
+ const display = document.querySelector('div#country');
+ const resultView = new ResultView(display);
+ //resultView.bindEvents(); 
 
 });
